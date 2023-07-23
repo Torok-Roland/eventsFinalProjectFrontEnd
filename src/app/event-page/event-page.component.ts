@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Event} from 'src/app/module/event';
 import {HttpClient} from "@angular/common/http";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-event-page',
@@ -9,16 +9,19 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./event-page.component.css']
 })
 export class EventPageComponent {
-  event: Event = new Event(1,
-    "Zilele Orasului Satu Mare",
-    new Date(2024, 7, 23, 11, 0),
-    new Date(2024, 7, 24, 12, 0),
-    "Cel mai mare eveniment",
-    "Satu Mare");
+  event: Event = new Event(
+    null,
+    null,
+    null,
+    null,
+    null,
+    null);
 
   httpClient: HttpClient;
-  route : ActivatedRoute;
-  constructor(httpClient: HttpClient, route: ActivatedRoute) {
+  route: ActivatedRoute;
+
+  constructor(httpClient: HttpClient, route: ActivatedRoute, private router: Router) {
+    // daca declar un field privat in consturctor nu mai trebuie sa-l declar inainte de constructor vezi httpClient si route
     this.httpClient = httpClient;
     this.route = route;
 
@@ -29,8 +32,15 @@ export class EventPageComponent {
     this.httpClient.get("/api/events/" + eventId).subscribe((response) => {
       console.log(response);
       this.event = response as Event;
-      this.event.startDate = new Date(this.event.startDate);
-      this.event.endDate = new Date(this.event.endDate);
+      if (this.event.startDate != null)
+        this.event.startDate = new Date(this.event.startDate!);
+      if (this.event.endDate != null)
+        this.event.endDate = new Date(this.event.endDate!);
+    }, (error) => {
+      console.log(error);
+      if (error.error == ("There it is no event with id:" + eventId)) {
+        this.router.navigate(["/not-found"])
+      }
     })
   }
 

@@ -3,13 +3,14 @@
  */
 
 export class Event {
-  id: number;
-  name: string;
-  startDate: Date;
-  endDate: Date;
-  description: string;
-  location: string;
-  constructor(id:number, name:string, startDate: Date, endDate: Date, description:string, location:string){
+  id: number | null;
+  name: string | null;
+  startDate: Date | null;
+  endDate: Date | null;
+  description: string | null;
+  location: string | null;
+  constructor(id:number | null, name:string | null, startDate: Date | null, endDate: Date | null, description:string | null,
+              location:string | null){
     this.id = id;
     this.name = name;
     this.startDate = startDate;
