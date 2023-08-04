@@ -1,0 +1,10 @@
+.header-lake{
+  background-color: papayawhip;
+  display:flex;
+  justify-content: space-between;
+  padding-right: 10px ;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+/*  padding: 10px 5px 10px 5px;*/
+}
