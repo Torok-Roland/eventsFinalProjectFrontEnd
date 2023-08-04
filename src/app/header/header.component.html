@@ -2,10 +2,17 @@
   <div class="left-frog">
     <style>.left-frog button {
       margin-right: 5px;
-    }</style>
-    <button mat-flat-button color="primary">Events</button>
-    <button mat-flat-button color="primary">Categories</button>
+    }
+    .home-button {
+      margin-left: 670px;
+    }
+    </style>
+    <button mat-flat-button color="primary" routerLink="/events">Events</button>
+    <button mat-flat-button color="primary" routerLink="/categories">Categories</button>
+    <button mat-flat-button routerLink="/" class = "home-button">Home</button>
   </div>
   <div class="right-frog"></div>
   <button mat-flat-button color="primary">Login</button>
 </div>
+
+
