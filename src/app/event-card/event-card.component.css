@@ -1,0 +1,15 @@
+.event-card {
+  width: 300px;
+  margin: 30px 15px 0px 15px;
+}
+
+.event-card-image {
+  height: 200px;
+  object-fit: contain;
+}
+
+.event-card-content {
+  height: 100px;
+  padding-top: 20px;
+  overflow: hidden;
+}
