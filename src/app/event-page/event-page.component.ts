@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Event} from 'src/app/module/event';
+import {Event} from 'src/app/model/event';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
 
@@ -33,9 +33,9 @@ export class EventPageComponent {
       console.log(response);
       this.event = response as Event;
       if (this.event.startDate != null)
-        this.event.startDate = new Date(this.event.startDate!);
+        this.event.startDate = new Date(this.event.startDate);
       if (this.event.endDate != null)
-        this.event.endDate = new Date(this.event.endDate!);
+        this.event.endDate = new Date(this.event.endDate);
     }, (error) => {
       console.log(error);
       if (error.error == ("There it is no event with id:" + eventId)) {

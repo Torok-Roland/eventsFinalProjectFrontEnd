@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Category} from "../module/category";
+import {Category} from "../model/category";
 import {ActivatedRoute, Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 @Component({

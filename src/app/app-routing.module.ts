@@ -4,6 +4,7 @@ import {EventPageComponent} from "./event-page/event-page.component";
 import {NotFoundPageComponent} from "./not-found-page/not-found-page.component";
 import {CategoryComponentComponent} from "./category-component/category-component.component";
 import {EventsPageComponent} from "./events-page/events-page.component";
+import {NewEventPageComponent} from "./new-event-page/new-event-page.component";
 
 const routes: Routes = [
   {
@@ -15,8 +16,10 @@ const routes: Routes = [
   },
   {
     path: "categories", component: CategoryComponentComponent
-
-  }
+  },
+  {
+    path: "new-event", component: NewEventPageComponent
+  },
 ];
 
 @NgModule({
