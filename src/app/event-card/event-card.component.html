@@ -3,7 +3,9 @@
     <mat-card-title>{{event.name}}</mat-card-title>
     <mat-card-subtitle>{{event.location}}</mat-card-subtitle>
     </mat-card-header>
-  <img class ="event-card-image" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <img class ="event-card-image" mat-card-image
+       src="{{event.imgUrl ? event.imgUrl : 'https://tinyurl.com/ypkvwcnt'}}"
+       alt="Photo of the event"/>
   <mat-card-content class = "event-card-content">
     <p>{{event.description}}</p>
     </mat-card-content>

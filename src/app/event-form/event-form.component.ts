@@ -14,8 +14,9 @@ export class EventFormComponent {
     name: "",
     startDate: null,
     endDate: null,
-    description: "",
-    location: ""
+    description: null,
+    location: null,
+    imgUrl: null,
   }
   // un container pentru toate casutele de input
   eventForm: FormGroup = new FormGroup({
