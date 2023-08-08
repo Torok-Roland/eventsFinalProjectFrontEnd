@@ -23,6 +23,7 @@ export class EventFormComponent {
     nameInputFormControl: new FormControl(),
     descriptionInputFormControl : new FormControl(),
     locationInputFormControl : new FormControl(),
+    imgUrlInput: new FormControl()
 
   });
 }
