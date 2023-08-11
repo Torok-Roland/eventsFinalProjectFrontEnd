@@ -1,5 +1,5 @@
 <div>
-  <form [formGroup]= "eventForm">
+  <form [formGroup]= "eventForm" (ngSubmit)="saveEvent()" class="event-form">
       <mat-form-field>
         <mat-label>Event name</mat-label>
         <input matInput formControlName="nameInputFormControl">
@@ -17,22 +17,26 @@
 
     <mat-form-field>
       <mat-label>Image URL</mat-label>
-      <input matInput formControlName = "imgUrlInput"/>
+      <input matInput formControlName="imgUrlInput"/>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Event start date</mat-label>
-      <input matInput [matDatepicker]="startDatepicker" formControlName = "startDateInput"/>
+      <input matInput [matDatepicker]="startDatepicker" formControlName="startDateInput"/>
       <mat-datepicker #startDatepicker></mat-datepicker>
-      <mat-datepicker-toggle [for]="startDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker-toggle matIconSuffix  [for]="startDatepicker"></mat-datepicker-toggle>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Event end date</mat-label>
       <input matInput [matDatepicker]="endDatePicker" formControlName="endDateInput"/>
       <mat-datepicker #endDatePicker></mat-datepicker>
-      <mat-datepicker-toggle [for]="endDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker-toggle matIconSuffix  [for]="endDatePicker"></mat-datepicker-toggle>
     </mat-form-field>
+
+    <button mat-raised-button type="submit" color="primary">Save</button>
+
+
 
   </form>
 </div>

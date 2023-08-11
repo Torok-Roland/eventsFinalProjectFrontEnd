@@ -1,11 +1,36 @@
-.header-lake{
+.header-lake {
   background-color: papayawhip;
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  padding-right: 10px ;
+  padding-right: 10px;
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-/*  padding: 10px 5px 10px 5px;*/
+  /*  padding: 10px 5px 10px 5px;*/
+}
+
+.right-frog {
+  display: flex;
+  gap: 10px;
+}
+
+.custom-home-icon {
+  background-color: black; /* Set the background color of the icon */
+  color: white !important; /* Set the color of the icon content to white */
+  border-radius: 50%; /* Add border-radius to create a circular shape */
+  padding: 10px; /* Add padding for spacing within the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-account-icon {
+  background-color: black; /* Set the background color of the icon */
+  color: white !important; /* Set the color of the icon content to white */
+  border-radius: 50%; /* Add border-radius to create a circular shape */
+  padding: 10px; /* Add padding for spacing within the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 

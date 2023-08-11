@@ -3,16 +3,17 @@
     <style>.left-frog button {
       margin-right: 5px;
     }
-    .home-button {
-      margin-left: 670px;
-    }
     </style>
-    <button mat-flat-button color="primary" routerLink="/events">Events</button>
-    <button mat-flat-button color="primary" routerLink="/categories">Categories</button>
-    <button mat-flat-button routerLink="/" class = "home-button">Home</button>
+    <button mat-flat-button routerLink="/events" style="color: white; background-color: black">Events</button>
+    <button mat-flat-button routerLink="/categories" style="color: white; background-color: black">Categories</button>
   </div>
-  <div class="right-frog"></div>
-  <button mat-flat-button color="primary">Login</button>
+
+  <div class="right-frog">
+    <button mat-mini-fab routerLink="/">
+      <mat-icon class="custom-home-icon">home</mat-icon>
+    </button>
+    <button mat-mini-fab>
+      <mat-icon class="custom-account-icon">account_circle</mat-icon>
+    </button>
+  </div>
 </div>
-
-
