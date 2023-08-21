@@ -1,0 +1,22 @@
+.login {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-title {
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+
+}
+
+.body_login {
+  background: url(https://images.wallpaperscraft.com/image/single/board_black_line_55220_1920x1080.jpg);
+  background-size: cover;
+}
+
+.navigate-register {
+  margin-left: 45px;
+}

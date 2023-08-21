@@ -1,0 +1,28 @@
+<body class="body_login">
+<div class="login">
+  <form [formGroup]="userForm" (ngSubmit)="login()">
+    <h2 class="login-title">Login</h2>
+    <div>
+      <mat-form-field style="width: 300px;">
+        <mat-label>Username:</mat-label>
+        <mat-icon matIconPrefix>perm_identity</mat-icon>
+        <input matInput formControlName="userNameInputFormControl">
+
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field style="width: 300px;">
+        <mat-label>Password:</mat-label>
+        <mat-icon matIconPrefix>enhanced_encryption</mat-icon>
+        <input matInput formControlName="passwordInputFormControl" type="password" #passwordInput>
+        <button matIconSuffix mat-icon-button type="button" (click)="togglePasswordVisibility(passwordInput)">
+          <mat-icon>{{ passwordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button type="submit">Login</button>
+    <button class="navigate-register" mat-raised-button type="button" (click)="navigateToRegister()">Navigate to Register
+    </button>
+  </form>
+</div>
+</body>

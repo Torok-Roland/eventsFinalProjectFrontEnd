@@ -1,12 +1,14 @@
-<mat-card class = "event-card">
-  <mat-card-header>
-    <mat-card-title>{{event.name}}</mat-card-title>
-    <mat-card-subtitle>{{event.location}}</mat-card-subtitle>
-    </mat-card-header>
-  <img class ="event-card-image" mat-card-image
-       src="{{event.imgUrl ? event.imgUrl : 'https://tinyurl.com/ypkvwcnt'}}"
-       alt="Photo of the event"/>
-  <mat-card-content class = "event-card-content">
-    <p>{{event.description}}</p>
-    </mat-card-content>
-</mat-card>
+<ul class="event-card-list">
+    <mat-card class="event-card">
+      <mat-card-header>
+        <mat-card-title>{{event.name}}</mat-card-title>
+        <mat-card-subtitle class="events_card_subtitle_location">{{event.location}}</mat-card-subtitle>
+      </mat-card-header>
+      <img class="event-card-image" mat-card-image
+           src="{{event.imgUrl ? event.imgUrl : 'https://tinyurl.com/ypkvwcnt'}}"
+           alt="Photo of the event"/>
+      <mat-card-content class="event-card-content">
+        <p>{{event.description}}</p>
+      </mat-card-content>
+    </mat-card>
+</ul>

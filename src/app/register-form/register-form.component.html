@@ -1,0 +1,31 @@
+<body class="body_register">
+<div class="register">
+  <h2 class="register-title">Register</h2>
+  <form [formGroup]="userForm" (ngSubmit)="saveUser()" class="user-form">
+    <div>
+      <mat-form-field style="width: 300px;">
+        <mat-label>Username:</mat-label>
+        <mat-icon matIconPrefix>perm_identity</mat-icon>
+        <input matInput formControlName="userNameInputFormControl">
+
+      </mat-form-field>
+      <div class="username-taken" *ngIf="userForm.get('userNameInputFormControl')?.hasError('usernameTaken')">
+        Username is already taken.
+      </div>
+    </div>
+    <div>
+      <mat-form-field style="width: 300px;">
+        <mat-label>Password:</mat-label>
+        <mat-icon matIconPrefix>enhanced_encryption</mat-icon>
+        <input matInput formControlName="passwordInputFormControl" type="password" #passwordInput>
+        <button matIconSuffix mat-icon-button type="button" (click)="togglePasswordVisibility(passwordInput)">
+          <mat-icon>{{ passwordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button type="submit">Register</button>
+    <button class="navigate-login" mat-raised-button type="button" (click)="navigateToLogin()">Navigate to Login
+    </button>
+  </form>
+</div>
+</body>

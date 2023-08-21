@@ -3,5 +3,12 @@
   display:flex;
   flex-direction: column;
   align-items: center ;
-}
 
+}
+.title{
+  color: white;
+}
+.body_new_event_page{
+  background: url(https://images.wallpaperscraft.com/image/single/board_black_line_55220_1920x1080.jpg);
+  background-size: cover;
+}

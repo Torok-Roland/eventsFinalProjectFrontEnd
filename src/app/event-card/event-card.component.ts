@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Event} from 'src/app/model/event';
 
+// this component is for the cards for events like upcoming events
 @Component({
   selector: 'app-event-card',
   templateUrl: './event-card.component.html',
@@ -9,6 +10,7 @@ import {Event} from 'src/app/model/event';
 
 })
 export class EventCardComponent {
+  events: Event[] = [];
 
   @Input()  //in cazul in care am pus () este o functie
   event: Event = {
@@ -20,4 +22,5 @@ export class EventCardComponent {
     location: null,
     imgUrl: null,
   }
+
 }

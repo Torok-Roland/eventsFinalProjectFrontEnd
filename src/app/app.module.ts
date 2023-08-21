@@ -23,6 +23,8 @@ import { EventCardComponent } from './event-card/event-card.component';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { NewEventPageComponent } from './new-event-page/new-event-page.component';
 import { EventFormComponent } from './event-form/event-form.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
+import { LoginFormPageComponent } from './login-form-page/login-form-page.component';
 
 
 
@@ -37,7 +39,9 @@ import { EventFormComponent } from './event-form/event-form.component';
     EventCardComponent,
     ConfirmationDialogComponent,
     NewEventPageComponent,
-    EventFormComponent
+    EventFormComponent,
+    RegisterFormComponent,
+    LoginFormPageComponent
 
   ],
   imports: [

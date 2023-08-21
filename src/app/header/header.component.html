@@ -12,8 +12,23 @@
     <button mat-mini-fab routerLink="/">
       <mat-icon class="custom-home-icon">home</mat-icon>
     </button>
-    <button mat-mini-fab>
+    <button mat-mini-fab (click)="toggleOptions()">
       <mat-icon class="custom-account-icon">account_circle</mat-icon>
     </button>
+
+    <div class="options" *ngIf="showOptions">
+      <ul class="main_list">
+        <li class="main_message">
+          <h1>Welcome!</h1>
+          <a>Please select Register if you dont have an account, or Login to create one.</a>
+        </li>
+        <li class="main_register">
+          <a href="/register">Register</a>
+        </li>
+        <li class="main_login">
+        <a href="/login">Login</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

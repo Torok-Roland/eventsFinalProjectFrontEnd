@@ -1,6 +1,8 @@
+<html>
+<body class="body_eventsPage">
 <div class = "events-container">
-  <h1>Events</h1>
-  <button mat-icon-button color="primary" routerLink="/new-event">
+  <h1 class="title">Events</h1>
+  <button class="new_eventButton" mat-icon-button routerLink="/new-event">
   <mat-icon>add</mat-icon>
   </button>
   <div class = "events-card-container">
@@ -8,4 +10,5 @@
       *ngFor = "let e of events" [event] = "e" (click) = "navigateToEvent(e)" ></app-event-card>
   </div>
 </div>
-
+</body>
+</html>
